@@ -1,0 +1,353 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+::placeholder{color:#979797;}
+$regular:'Akrobat-regular';
+$bold:'black';
+@mixin gradient {background-image: linear-gradient(left,#5AB9EA , #8664D1,);
+    
+}
+@mixin form {display:flex;flex-wrap:wrap;justify-content: flex-end;align-items:center;
+    label{display:flex;margin-bottom:20px;margin-left:20px;font-family:'regular';align-items:center;cursor: pointer;font-size:20px;
+        input{font-family:'regular';padding:20px !important;margin-right:15px;background-color: transparent;appearance: none;cursor: pointer;}
+        input[type="checkbox"]{background-color:transparent !important;border:4px solid #fff;outline:none;zoom:0.5;}
+        
+        input[type='checkbox']:checked
+        {
+            position:relative;border:4px solid #89CFE6;
+            
+        }
+        input[type='checkbox']:checked:before{ content:'';display:block;width:17px;height:16px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);background:url(./img/foursquare-check-in.png);background-position:center; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;
+        }
+        &:checked{color:#000;}
+       
+       
+    }
+    label:checked{color:#000;}
+        button{transition:all .5s ease;
+            &:hover{@include hover-blue()}
+            span{padding-left:5px;}
+        }
+        
+}
+
+.donate-form{display:flex;flex-wrap:wrap;justify-content:center;margin:50px 0;padding:0 5%;
+    form{
+        p{font-family: 'bold';padding-bottom:20px;line-height:24px;}
+        input,textarea{border:none;font-family:'bold';color:#979797;font-size:21px;border-bottom:1px solid #979797;border-radius:0;outline:none;box-shadow:none !important;padding-bottom:20px;margin-bottom:20px;
+            >::placeholder{color:#979797;}
+        }
+        textarea{font-family:'regular';padding-bottom:0px;}
+        button{width:250px;border:none;border:4px solid #5AB9EA;display:flex;align-items:center;justify-content: center;border-radius:0;margin-top:40px;font-family:'regular';height:50px;
+            
+        }
+    }
+}
+
+.sessions{margin:50px 0%;
+    .img{width: 100%;
+        img{width: 100%;}
+    }
+    form{@include gradient;width:100%;padding:15% 3%;display:flex;flex-wrap: wrap;
+        p{font-family: 'bold';line-height:24px;margin-bottom:30px;color:#fff;}
+        input{background-color:transparent;border:none;font-family:'bold';border-bottom:1px solid #fff;border-radius:0;margin-bottom:30px;padding-bottom:20px;;
+            &:nth-of-type(1){width: 48%;margin-right:auto;}
+            &:nth-of-type(2){width: 48%;margin-left: auto;}
+             &::placeholder{color:#fff;}
+             &:focus{background-color:transparent;outline: none;box-shadow:none;}
+        }
+        .column{margin-right:auto;justify-content:start;width:100%;color:#fff;align-items: center;margin-bottom:20px;flex-wrap: wrap;
+            p{font-size:20px;margin-bottom: 20px;width: 100%;}
+            label{margin-bottom:0;display: flex;font-family:'regular';margin-right:20px;align-items: center;
+                input[type="checkbox"]{margin-right:5px;outline: none;border:2px solid #fff;width:30px;appearance:none !important;-webkit-appearance: none;position: relative;
+                    &:checked{border:4px solid #5AB9EA;}
+                }
+                input[type='checkbox']:checked:before{ content:'';display:block;width:17px;height:16px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);background:url(./img/foursquare-check-in.png);background-position:center; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;
+                }
+            }
+           
+            input{width:25%;font-size:10px;margin: 0;padding-bottom:0;margin-bottom: 0;height: 35px;border:2px solid #fff;outline: none;text-align: center;color:#fff;}
+        }
+        .submit{margin-right:auto;display:flex;align-items:center;border:2px solid #fff;height:40px;justify-content: center;padding:0 5%;width:100%;;
+            p{padding-bottom: 0;margin-bottom: 0;font-size:15px;font-family:'regular';
+                b,em{font-family:'bold';}
+            }
+            img{height:10px;margin-left:12px;}
+        }
+        button:last-of-type{border: none;font-family:'regular';text-transform:capitalize;font-size:16px;width:auto;margin-bottom:0;display:flex;align-items:center;margin-top:20px;outline: none;box-shadow:none;background-color:transparent;border:2px solid #5AB9EA;height:60px;width:200px;text-align: center;display: flex;justify-content: center;
+            &:hover{background-color:#5AB9EA;}
+           
+        }
+        
+    }
+
+}
+
+.book{display:flex;flex-direction:column;margin:50px 5%;;
+    .author{
+        p{font-family:'bold';font-size:22px;line-height:1.6;padding-bottom:20px;
+        
+        }
+        a{padding-top:20px;font-family:'bold';margin-bottom:30px;display: block;color: #34879D;line-height: 1.6;;}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+ 
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+ 
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+    .donate-form{flex-direction:row;align-items: center;justify-content: space-between;padding: 0 3%;;
+        form{width:100%;}
+        img{height:217px;}
+    }
+
+.sessions{margin:50px 0%;
+    .img{width: 100%;
+        img{width: 100%;}
+    }
+    form{
+      
+       
+        .column{flex-wrap:nowrap;
+            p{font-size:20px;margin-bottom: 0;}
+            label{margin-bottom: 0;
+                input{margin-right:5px;outline: none;}
+            }
+           
+            input{font-size:20px;width:68%;text-align: center;}
+        }
+        .submit{width:75%;height:60px;;
+            p{font-size:20px;}
+           
+        }
+        button:last-of-type{font-size:20px;margin-top:0;;
+            
+        }
+        
+    }
+    
+
+}
+.book{
+    img{height:300px;object-fit: cover;}
+}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    .donate-form{padding: 0 5%;;
+        form{
+           p{font-size:30px;line-height: 1.5;padding-bottom:60px;}
+            input:nth-of-type(1){width:47%;margin-right: auto;}
+            input:nth-of-type(2){width:47%;margin-left: auto;}
+            
+            textarea{font-family:'regular';padding-bottom:0px;}
+            button{width:200px;height:50px;font-size:20px;
+                
+            }
+            
+    
+        }
+        img{height:300px;display:none !important;}
+    }
+    .sessions{flex-direction: row;
+        .img{width:0%;
+            img{height:100%;object-fit:cover;}
+        }
+        form{margin-bottom:0;
+          p{font-size:24px;line-height:1.5;}
+           
+            .column{margin-bottom:40px;
+                p{font-size:27px;margin-bottom:0px;}
+                label{margin-bottom: 0;font-size: 30px;
+                    input{margin-right:5px;outline: none;zoom:.75;margin-top: 0;}
+                }
+               
+                input{font-size:18px;width:65%;margin-left:12px;height:50px;;}
+            }
+            .submit{width:80%;height:60px;border-width:4px;;
+                p{font-size:24px;}
+               
+            }
+            button:last-of-type{font-size:30px;margin-top:20px;color: #fff;
+                
+            }
+            
+        }
+    
+    }
+    .book{flex-direction:row;justify-content: space-between;align-items: center;;
+        .author{width: 50%;
+            
+            a{padding-top:0px;}
+        }
+    }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .donate-form{padding: 0 5%;margin:100px 0;;
+        form{width: 50%;
+           
+           p{font-size:28px;line-height:1.5;padding-bottom:50px;}
+            
+            
+            button{width:250px;height:60px;transition:all .5s ease;
+                
+            }
+            
+    
+        }
+        img{height:370px;display: block !important;}
+    }
+    .sessions{margin:90px 0;flex-wrap:nowrap;display: flex;
+        .img{width:75%;}
+        form{margin-bottom:0;padding:4% 3%;
+          
+            p{font-size:28px;line-height:1.5;}
+            input{font-size:21px;color:#fff;}
+            .column{
+                label{font-size:30px;
+                    input{margin-right:12px;}
+                }
+                p{font-size:20px;margin-bottom: 0;}
+               
+               
+                input{font-size:14px;width:60%;}
+            }
+            .submit{width:75%;height:60px;;
+                p{font-size:22px;
+                    em,b{font-size:18px;}
+                }
+               
+            }
+            button:last-of-type{margin-top:0px;width:22%;
+               &:hover{color:#fff;background-color:#5AB9EA;transition:all .5s ease;;} 
+            }
+            
+        }
+    
+    }
+
+    .book{margin:120px 5%;
+       img{height:400px;}
+    }
+
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .sessions{margin:90px 0;
+        
+        form{margin-bottom:0;
+          
+           
+            .column{margin-bottom:40px;
+                label{font-size:30px;
+                    input{zoom:.75;margin-right:26px !important;}
+                }
+                p{font-size:24px;margin-bottom: 0;}
+               
+               
+                input{font-size:18px;width:60%;height:50px;}
+            }
+            .submit{width:65%;height:60px;border-width:4px;
+                p{font-size:22px;
+                    em,b{font-size:24px;}
+                }
+               
+            }
+            button:last-of-type{margin-top:0px;width:30%;
+                
+            }
+            
+        }
+    
+    }
+
+    .book{
+        .author{
+            p{white-space:pre-line;}
+            a{white-space:pre-line;font-size:22px;}
+        }
+        img{height:484px;}
+     }
+}
+ 
+ 
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 

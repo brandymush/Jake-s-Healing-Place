@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+$regular:'Akrobat-regular';
+$bold:'black';
+@mixin gradient {background-image: linear-gradient(left,#5AB9EA , #8664D1,);
+    
+}
+header.navbar{position: relative;width: 100%;position: absolute;;color:#fff;z-index: 999;@include gradient();height:15vh;
+    p{font-family:'black';}
+    .harmburger{display:flex;align-items: center;cursor: pointer;z-index:99999;;
+        p{font-size:16px;padding-right:15px;}
+        .bars{height:30px;width:35px;display:flex;align-items: center;flex-direction:column;justify-content: space-around;position: relative;
+            .bar{height:3px;width:100%;background-color: #fff;transition:.5s ease-in-out;
+                &:nth-child(2){width:70%;margin-left:auto;}
+
+            }
+        }
+        &.nav-open{
+            .bars{position: relative;
+                .bar{position: absolute;top:13px;transition:.5s ease-in-out;;
+                    &:nth-of-type(1){transform: rotate(45deg)}
+                    &:nth-of-type(2){opacity: 0;left: -60px;}
+                    &:nth-of-type(3){transform: rotate(-45deg)}
+                }
+            }
+        }
+    }
+    ul{position: absolute;top:0%;left:20px;display:flex;@include gradient();width:100%;height:100%;left: 0;height:100%;;transition:all .6s ease-out;height:385px;padding:5%;align-items:flex-start;justify-content: center;flex-direction:column;left:100%;
+        li{padding-bottom:5px;border-bottom:2px solid #fff;margin-bottom:5px;
+            a{font-family:'black';color:#000;text-decoration: none;font-size:30px;}
+        }
+        &.show{left:0;}
+    }
+
+}
+
+
+
+
+
+ 
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+ 
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+ 
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+    header.navbar{width:100%;right: 0;height:15vh;padding-top: 0 !important;;
+        ul{height: 380px;}
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    header.navbar{width:50%;right: 0;
+        ul{height:450px;
+            li{padding-bottom:10px;
+                a{margin-bottom:12px;}}
+        }
+    }
+}
+
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    header.navbar{width:50%;right: 0;padding-right:5%;padding-top:3%;padding-left:5%;
+        ul{height:530px;top:0%;
+            li{margin-bottom:15px;
+                a:hover{color:#fff;transition:all .5s ease;}
+            }
+        }
+    }
+
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    header.navbar{
+        ul{height:590px;top:140%;
+            li{padding-bottom:15px;margin-bottom:15px;;
+                a{font-size:40px;;}
+            }
+        }
+    }
+}
+ 
+ 
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 

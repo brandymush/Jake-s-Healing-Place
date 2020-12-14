@@ -1,0 +1,275 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header.navbar {
+  position: relative;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  z-index: 999;
+  background-image: -webkit-gradient(linear, left top, right top, from(#5AB9EA), to(#8664D1));
+  background-image: linear-gradient(left, #5AB9EA, #8664D1);
+  height: 15vh;
+}
+
+header.navbar p {
+  font-family: 'black';
+}
+
+header.navbar .harmburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+header.navbar .harmburger p {
+  font-size: 16px;
+  padding-right: 15px;
+}
+
+header.navbar .harmburger .bars {
+  height: 30px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+header.navbar .harmburger .bars .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header.navbar .harmburger .bars .bar:nth-child(2) {
+  width: 70%;
+  margin-left: auto;
+}
+
+header.navbar .harmburger.nav-open .bars {
+  position: relative;
+}
+
+header.navbar .harmburger.nav-open .bars .bar {
+  position: absolute;
+  top: 13px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header.navbar .harmburger.nav-open .bars .bar:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header.navbar .harmburger.nav-open .bars .bar:nth-of-type(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+header.navbar .harmburger.nav-open .bars .bar:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header.navbar ul {
+  position: absolute;
+  top: 0%;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, right top, from(#5AB9EA), to(#8664D1));
+  background-image: linear-gradient(left, #5AB9EA, #8664D1);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  height: 100%;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  height: 385px;
+  padding: 5%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 100%;
+}
+
+header.navbar ul li {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 5px;
+}
+
+header.navbar ul li a {
+  font-family: 'black';
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+header.navbar ul.show {
+  left: 0;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {
+  header.navbar {
+    width: 100%;
+    right: 0;
+    height: 15vh;
+    padding-top: 0 !important;
+  }
+  header.navbar ul {
+    height: 380px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  header.navbar {
+    width: 50%;
+    right: 0;
+  }
+  header.navbar ul {
+    height: 450px;
+  }
+  header.navbar ul li {
+    padding-bottom: 10px;
+  }
+  header.navbar ul li a {
+    margin-bottom: 12px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  header.navbar {
+    width: 50%;
+    right: 0;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-left: 5%;
+  }
+  header.navbar ul {
+    height: 530px;
+    top: 0%;
+  }
+  header.navbar ul li {
+    margin-bottom: 15px;
+  }
+  header.navbar ul li a:hover {
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  header.navbar ul {
+    height: 590px;
+    top: 140%;
+  }
+  header.navbar ul li {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  header.navbar ul li a {
+    font-size: 40px;
+  }
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/*# sourceMappingURL=header.css.map */
