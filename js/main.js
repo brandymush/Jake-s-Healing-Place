@@ -102,7 +102,7 @@ $('.story-slider').slick({
   arrows:true,
   prevArrow: $('.prev'),
   nextArrow: $('.next'),
-  speed:'10s',
+  speed:0,
   cssEase: 'linear',
   
 
