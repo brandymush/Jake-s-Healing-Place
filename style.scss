@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1.5;overflow-x: hidden;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -302,7 +303,10 @@ section.quote{ @include gradient;padding:50px 5%;text-align:left;font-family:'se
             }
         }
     }
-    .slick-center{border-top:5px solid #5AB9EA;
+    .slick-active{opacity: 1;
+        transition: opacity .5s ease-in-out;}
+    .slick-center{border-top:5px solid #5AB9EA; opacity: 1;
+        transition: opacity .5s ease-in-out;
         .name{display: none;}
         .testimonial{display:block;}
     }
@@ -314,6 +318,18 @@ section.quote{ @include gradient;padding:50px 5%;text-align:left;font-family:'se
 .slick-slide{height: inherit !important;display:flex !important;align-items: center;justify-content: center;
     >div{width:100%;}
 }
+.slick-slide {
+    opacity: .3;
+    transition: opacity 1s ease-in-out;
+ }
+ .slick-current {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+ }
+ .slick-active{
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+ }
 
 }
 

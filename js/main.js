@@ -97,12 +97,15 @@ $('.story-slider').slick({
   centerMode:true,
   centerPadding: '60px',
   slidesToShow: 3,
-  slidesToScroll:1,
-  fade:false,
+  slidesToScroll:3,
+  infinite: true,
   arrows:true,
   prevArrow: $('.prev'),
   nextArrow: $('.next'),
-  speed: 500,
+  speed:'10s',
+  cssEase: 'linear',
+  
+
  
   responsive: [
     {
