@@ -519,8 +519,6 @@ input[type="checkbox"]:checked ~ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
 .tabs .card ul li.active {

@@ -135,7 +135,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
     header.navbar{
-        ul{height:590px;top:140%;
+        ul{height:590px;top:0%;
             li{padding-bottom:15px;margin-bottom:15px;;
                 a{font-size:40px;;}
             }

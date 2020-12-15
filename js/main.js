@@ -94,19 +94,16 @@ $('#one label input').click(function(){
 
 $('.story-slider').slick({
   
-  centerMode: true,
-  // centerPadding: '60px',
+  centerMode:true,
+  centerPadding: '60px',
   slidesToShow: 3,
-  slidesToScroll: 1,
-  adaptiveHeight:false,
+  slidesToScroll:1,
+  fade:false,
   arrows:true,
   prevArrow: $('.prev'),
   nextArrow: $('.next'),
-  
-  
-  
   speed: 500,
-  
+ 
   responsive: [
     {
       breakpoint: 991,
@@ -240,3 +237,5 @@ function onBlur(e){
     ? localStringToNumber(value).toLocaleString(undefined, options)
     : ''
 }
+
+

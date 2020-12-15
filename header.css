@@ -257,7 +257,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 @media (min-width: 1200px) {
   header.navbar ul {
     height: 590px;
-    top: 140%;
+    top: 0%;
   }
   header.navbar ul li {
     padding-bottom: 15px;
