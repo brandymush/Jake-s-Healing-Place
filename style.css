@@ -1382,7 +1382,7 @@ section.quote span {
   transition: opacity 1s ease-in-out;
 }
 
-.story-slider .slick-current {
+.story-slider .slick-center {
   opacity: 1;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
